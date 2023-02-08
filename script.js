@@ -64,6 +64,8 @@ let moveDot = function() {
     }    
 }
 
+//create dots
+
 dot = new Dot(10, 50, 10, "rgba(255,255,255,1)", 1, 0.5);
 all_dots.push(dot);
     
