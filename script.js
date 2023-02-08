@@ -42,7 +42,7 @@ class Dot {
 
         if (this.x >= cwidth - 12){  
             this.alpha -= this.dalpha;
-            this.color = 'rgba(255, 255, 255,' + this.alpha + ')';   
+            this.color = 'rgba(255, 255, 255,' + this.alpha + ')'; 
         }   
 
         if (this.alpha <= 0.2){
