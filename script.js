@@ -38,6 +38,7 @@ class Dot {
             this.color = 'rgba(255, 255, 255,' + this.alpha + ')';
         }
         
+        //move foward
         if (this.alpha >= .95){
             this.x += this.dx;
         }
