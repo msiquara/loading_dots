@@ -18,19 +18,21 @@ class Dot {
         this.speed = speed;
         this.dx = 1.5 * this.speed;
         this.alpha = alpha;
-        this.dalpha = 0.02;
+        this.dalpha = 0.02; //alpha speed change
     }
 
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);    
         ctx.fillStyle = this.color;
-        ctx.fill();        
+        ctx.fill(); //fill circle
         ctx.closePath();
     }
 
     update(ctx) {        
         this.draw();
+
+        //fade in
         if (this.x <= 10) {
             this.alpha += this.dalpha;
             this.color = 'rgba(255, 255, 255,' + this.alpha + ')';
@@ -43,9 +45,10 @@ class Dot {
         //fade out
         if (this.x >= cwidth - 12){  
             this.alpha -= this.dalpha;
-            this.color = 'rgba(255, 255, 255,' + this.alpha + ')'; 
+            this.color = 'rgba(255, 255, 255,' + this.alpha + ')';   
         }   
 
+        //back to begin
         if (this.alpha <= 0.2){
             this.x = 10;
         }
