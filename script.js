@@ -40,6 +40,7 @@ class Dot {
             this.x += this.dx;
         }
 
+        //fade out
         if (this.x >= cwidth - 12){  
             this.alpha -= this.dalpha;
             this.color = 'rgba(255, 255, 255,' + this.alpha + ')'; 
