@@ -42,23 +42,12 @@ class Dot {
 
         if (this.x >= cwidth - 12){  
             this.alpha -= this.dalpha;
-            this.color = 'rgba(255, 255, 255,' + this.alpha + ')';      
-            //ctx.globalAlpha = 0.2;
-            //this.globalAlpha = .2;
+            this.color = 'rgba(255, 255, 255,' + this.alpha + ')'; 
         }   
 
         if (this.alpha <= 0.2){
             this.x = 10;
         }
-
-        /*
-        if (this.x <= 10) {
-            this.dx = -this.dx;
-            this.color = 'rgba(255, 255, 255,' + .1 + ')';
-            //ctx.globalAlpha = 1;
-            //this.globalAlpha = 1;
-        }
-        */
     }
 }
 
@@ -80,69 +69,3 @@ dot = new Dot(cwidth-15, 50, 10, "rgba(255,255,255,1)", 1, 1);
 all_dots.push(dot);
 
 moveDot();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-document.getElementById("ponto").animate([
-    { transform: 'translateX(0px)' },
-    { transform: 'translateX(50px)' },
-    { animationDelay: 1000}
-    ],{
-        duration: 1000,
-        iterations: Infinity
-});
-
-document.getElementById("ponto2").animate([
-    { transform: 'translateX(0px)' },
-    { transform: 'translateX(50px)' },
-    { delay: 500}
-],{
-    duration: 1000,
-    iterations: Infinity
-});
-*/
