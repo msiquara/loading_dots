@@ -1,6 +1,6 @@
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
-let cwidth = 120;
+let cwidth = 140;
 let cheight = 100;
 
 canvas.width = cwidth;
@@ -39,7 +39,7 @@ class Dot {
         }
         
         //move foward
-        if (this.alpha >= .96){
+        if (this.alpha >= .95){
             this.x += this.dx;
         }
 
@@ -50,7 +50,7 @@ class Dot {
         }   
 
         //back to begin
-        if (this.alpha <= 0.15){
+        if (this.alpha <= 0.2){
             this.x = 10;
         }
     }
@@ -66,13 +66,13 @@ let moveDot = function() {
 
 //create dots
 
-dot = new Dot(10, 50, 10, "rgba(255,255,255,.24)", 1.2, 0.24);
+dot = new Dot(10, 50, 10, "rgba(255,255,255,1)", 1, 0.5);
 all_dots.push(dot);
     
-dot = new Dot(35, 50, 10, "rgba(255,255,255,1)", 1.2, 1);
+dot = new Dot(50, 50, 10, "rgba(255,255,255,1)", 1, 1);
 all_dots.push(dot);
 
-dot = new Dot(cwidth-18, 50, 10, "rgba(255,255,255,1)", 1.2, 1);
+dot = new Dot(cwidth-15, 50, 10, "rgba(255,255,255,1)", 1, 1);
 all_dots.push(dot);
 
 moveDot();
